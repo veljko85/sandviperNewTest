@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- lootie -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js"></script>
+  <!-- hammer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <title>Sandviper game</title>
+  <script type="module" crossorigin src="assets/index-BSl8fNaw.js"></script>
+  <link rel="stylesheet" crossorigin href="assets/index-Z8ilFFKX.css">
+</head>
+
+<body>
+  <div id="mainContainer">
+    <!-- LOADING -->
+    <div id="customLoadingScreenDiv">
+      <div id="lottieWraper"></div>
+      <div id="loadingPercentages">0%</div>
+    </div>
+    <!-- BABYLON CANVAS -->
+    <canvas id="renderCanvas"></canvas>
+    <!-- GAME SCREEN -->
+    <div id="mainScreen">
+      <div id="startGameDisplay">Start Game</div>
+      <div id="restartGameDisplay">Restart Game</div>
+    </div>
+    <div id="upperGameScreen">
+      <div id="pauseDisplay">||</div>
+      <div id="coinsDisplay">0</div>
+    </div>
+    <!-- FPS -->
+    <p id='fps'
+      style="position: absolute; bottom: 1vw; right: 10vw; font-size: 20px; color: rgb(255, 255, 255); z-index: 1000;">
+      1111</p>
+  </div>
+</body>
+
+</html>
