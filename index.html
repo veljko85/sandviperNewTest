@@ -3,13 +3,19 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="img/sandviperLogoSmall.png" />
+  <link rel="icon" type="image/svg+xml" href="img/sandviperLogoWhite.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- lootie -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js"></script>
   <!-- hammer.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <title>Sandviper game</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
   <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
@@ -27,30 +33,61 @@
   <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
   <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
   <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
-  <script type="module" crossorigin src="./assets/index-Cq_OjzbI.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-N9C1poU0.css">
+  <script type="module" crossorigin src="./assets/index-DQXCne_j.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DSN5xBHx.css">
 </head>
 
 <body>
   <div id="mainContainer">
-    <!-- LOADING -->
-    <div id="customLoadingScreenDiv">
-      <div id="lottieWraper"></div>
+    <!-- loading spinner -->
+    <div id="loadingSpinner">
+      <div id="loadingSpinnerBorder"></div>
       <div id="loadingPercentages">0%</div>
+      <div id="loadingLogo" style="background-image: url(img/sandviperName.png)"></div>
     </div>
     <!-- BABYLON CANVAS -->
     <canvas id="renderCanvas"></canvas>
     <!-- GAME SCREEN -->
     <div id="mainScreen">
-      <div id="startGameDisplay">Start Game</div>
-      <div id="restartGameDisplay">Restart Game</div>
-      <div id="resumeGameDisplay">Resume</div>
-      <div id="yourCodeDisplay">Your code is</div>
-      <div id="codeDisplay">AAAAAA</div>
+      <div id="startGameDisplay">
+        <div id="startLogo" style="background-image: url(img/Sandviper-horizontal-white.svg)"></div>
+        <div id="play" class="ring neon-blue">PLAY</div>
+        <div id="choseMale" class="ring neon-blue">
+          MALE
+          <div id="selectedDivMale">&#10003;</div>
+        </div>
+        <div id="choseFemale" class="ring neon-blue">
+          FEMALE
+          <div id="selectedDivFemale"></div>
+        </div>
+      </div>
+      <div id="gameOverContainer">
+        <div id="endScoreContainer">
+          <div id="endScoreCoins">
+            <div id="endScorecoinsLogo" style="background-image: url(img/sandviperLogoWhite.png)"></div>
+            <div id="endScorecoinsNumber">x 0</div>
+          </div>
+          <div id="endScoreDistance">Distance: 0m</div>
+        </div>
+        <div id="yourCodeDisplayContainer">
+          <div id="yourCodeDisplay">Your code is</div>
+          <div id="codeDisplay">AAAAAA</div>
+          <div id="copyCode">Copy Code</div>
+        </div>
+        <div id="restartGameDisplay">Restart Game</div>
+      </div>
+      <div id="pauseScreenContainer">
+        <div id="resumeGameDisplay">Game Paused</div>
+      </div>
+
     </div>
     <div id="upperGameScreen">
-      <div id="pauseDisplay">||</div>
-      <div id="coinsDisplay">0</div>
+      <div id="pauseDisplay">PAUSE</div>
+      <div id="distanceDisplay">0m</div>
+      <div id="coinsDisplay">
+        <div id="coinsLogo" style="background-image: url(img/sandviperLogoWhite.png)"></div>
+        <div id="coinsNumber">x 0</div>
+      </div>
     </div>
     <!-- FPS -->
     <p id='fps'
