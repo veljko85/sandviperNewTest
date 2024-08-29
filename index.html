@@ -33,8 +33,8 @@
   <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
   <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
   <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
-  <script type="module" crossorigin src="./assets/index-CWwM-Am3.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BXt_yYrq.css">
+  <script type="module" crossorigin src="./assets/index-Dyj8GWSC.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CDXoYxOD.css">
 </head>
 
 <body>
@@ -49,6 +49,45 @@
     <canvas id="renderCanvas"></canvas>
     <!-- GAME SCREEN -->
     <div id="mainScreen">
+
+      <!-- CONTROL -->
+      <div id="contorlsImgContainer">
+        <div id="closeControls">close</div>
+        <div id="controlsImg" style="background-image: url(img/controls.png)"></div>
+        <div id="controlsImgMob" style="background-image: url(img/controlsMob.png)"></div>
+      </div>
+      <!-- CREDITS -->
+
+      <div id="creditsMainContainer">
+        <div id="closeCredits">close</div>
+
+        <div id="creditsContainer">
+
+          <div id="creditsTitle">CREDITS</div>
+
+          <div class="credit">
+            <div class="creditModel">Cargobox (3D model)</div>
+            <div style="opacity: 50%;">By</div>
+            <div class="creditCreator">TobiasSchmithals</div>
+          </div>
+
+          <div class="credit">
+            <div class="creditModel">Futuristic Sci-fi Small Laser Barrier</div>
+            <div style="opacity: 50%;">By</div>
+            <div class="creditCreator">TobiasSchmithals</div>
+          </div>
+
+          <div class="credit">
+            <div class="creditModel">科技光圈特效Loop</div>
+            <div style="opacity: 50%;">By</div>
+            <div class="creditCreator">Yuki</div>
+          </div>
+
+
+        </div>
+
+      </div>
+
       <div id="startGameDisplay">
         <div id="startLogo" style="background-image: url(img/Sandviper-horizontal-white.svg)"></div>
         <div id="play" class="ring neon-blue">PLAY</div>
@@ -60,6 +99,8 @@
           FEMALE
           <div id="selectedDivFemale"></div>
         </div>
+        <div id="controlsDisplay" class="ring neon-blue">CONTROLS</div>
+        <div id="creditsDisplay" class="ring neon-blue">CREDITS</div>
       </div>
       <div id="gameOverContainer">
         <div id="endScoreContainer">
