@@ -33,8 +33,8 @@
   <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
   <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
   <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
-  <script type="module" crossorigin src="./assets/index-D0L7Xyf1.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CDXoYxOD.css">
+  <script type="module" crossorigin src="./assets/index-BCNLGEM8.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-g5ARHqGp.css">
 </head>
 
 <body>
@@ -44,6 +44,7 @@
       <div id="loadingSpinnerBorder"></div>
       <div id="loadingPercentages">0%</div>
       <div id="loadingLogo" style="background-image: url(img/sandviperName.png)"></div>
+      <div id="startGameFromLoading">START GAME</div>
     </div>
     <!-- BABYLON CANVAS -->
     <canvas id="renderCanvas"></canvas>
@@ -90,32 +91,34 @@
 
       <div id="startGameDisplay">
         <div id="startLogo" style="background-image: url(img/Sandviper-horizontal-white.svg)"></div>
-        <div id="play" class="ring neon-blue">PLAY</div>
-        <div id="choseMale" class="ring neon-blue">
+        <div id="play" class="ring neon-blue menu-btn">PLAY</div>
+        <div id="choseMale" class="ring neon-blue menu-btn">
           MALE
           <div id="selectedDivMale">&#10003;</div>
         </div>
-        <div id="choseFemale" class="ring neon-blue">
+        <div id="choseFemale" class="ring neon-blue menu-btn">
           FEMALE
           <div id="selectedDivFemale"></div>
         </div>
-        <div id="controlsDisplay" class="ring neon-blue">CONTROLS</div>
-        <div id="creditsDisplay" class="ring neon-blue">CREDITS</div>
+        <div id="controlsDisplay" class="ring neon-blue menu-btn">CONTROLS</div>
+        <div id="creditsDisplay" class="ring neon-blue menu-btn">CREDITS</div>
       </div>
       <div id="gameOverContainer">
-        <div id="endScoreContainer">
-          <div id="endScoreCoins">
-            <div id="endScorecoinsLogo" style="background-image: url(img/sandviperLogoWhite.png)"></div>
-            <div id="endScorecoinsNumber">x 0</div>
+        <div id="gameOverContainer2" class="ring neon-blue">
+          <div id="endScoreContainer">
+            <div id="endScoreCoins">
+              <div id="endScorecoinsLogo" style="background-image: url(img/sandviperLogoWhite.png)"></div>
+              <div id="endScorecoinsNumber">x 0</div>
+            </div>
+            <div id="endScoreDistance">Distance: 0m</div>
           </div>
-          <div id="endScoreDistance">Distance: 0m</div>
+          <div id="yourCodeDisplayContainer">
+            <div id="yourCodeDisplay">Your code is</div>
+            <div id="codeDisplay">23VM10</div>
+            <div id="copyCode">Copy Code</div>
+          </div>
+          <div id="restartGameDisplay">Restart Game</div>
         </div>
-        <div id="yourCodeDisplayContainer">
-          <div id="yourCodeDisplay">Your code is</div>
-          <div id="codeDisplay">AAAAAA</div>
-          <div id="copyCode">Copy Code</div>
-        </div>
-        <div id="restartGameDisplay">Restart Game</div>
       </div>
       <div id="pauseScreenContainer">
         <div id="gamePausedDisplay">Game Paused</div>
