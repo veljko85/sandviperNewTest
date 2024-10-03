@@ -33,14 +33,41 @@
   <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
   <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
   <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
-  <script type="module" crossorigin src="./assets/index-0KT7ORhE.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CfZWeElr.css">
+  <script type="module" crossorigin src="./assets/index-ByJWXaNk.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B3PJOer5.css">
 </head>
 
 <body>
   <div id="mainContainer">
     <!-- loading spinner -->
     <div id="loadingSpinner">
+      <!-- form -->
+      <!-- <form id="form1" style="display: none;">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <button type="submit" id="submitBtn">Send</button>
+
+          <div id="submitBtn">Submit</div>
+        </div>
+      </form> -->
+      <!-- <form id="form1">
+        <input name="name" type="text" id="name">
+        <input name="email" type="email" id="email">
+
+
+        <input name="_formsubmit_id" type="text" style="display:none"> -->
+
+      <!-- <input value="Submit" type="submit"> -->
+      <!-- <div id="submitBtn">Submit</div>
+      </form> -->
+
       <div id="loadingSpinnerBorder"></div>
       <div id="loadingPercentages">0%</div>
       <div id="loadingLogo" style="background-image: url(img/sandviperName.png)"></div>
@@ -114,9 +141,12 @@
             <div id="endScore">Score: 0</div>
           </div>
           <div id="yourCodeDisplayContainer">
-            <div id="yourCodeDisplay">Your code is</div>
-            <div id="codeDisplay">23VM10</div>
-            <div id="copyCode">Copy Code</div>
+            <div id="codeSuccessDisplay">
+              <div id="yourCodeDisplay">Your code is</div>
+              <div id="codeDisplay">23VM10</div>
+              <div id="copyCode">Copy Code</div>
+            </div>
+            <div id="codeUsedDisplay"></div>
           </div>
           <div id="restartGameDisplay">Restart Game</div>
         </div>
