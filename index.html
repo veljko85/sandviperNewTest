@@ -18,9 +18,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
-  <script type="module" crossorigin src="./assets/index-C2255njH.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/discountCode-D1dMDzlt.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-aneRM5li.css">
+  <script type="module" crossorigin src="./assets/index-cW-e9xAv.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/firebase-B9yhNKLu.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-ChwvwMgR.css">
 </head>
 
 <body>
@@ -33,25 +33,33 @@
 
         <div id="authSection">
           <input id="authEmail" placeholder="EMAIL">
-          <input id="authPassword" placeholder="PASSWORD" type="password">
+          <!-- <input id="authPassword" placeholder="PASSWORD" type="password"> -->
           <div id="authErrorDisplay">
             <h5 id="authErrorDisplayIcon" class="fa">&#xf057;</h5>
             <h5 id="authErrorDisplayText">Wrong email or password</h5>
+          </div>
+          <div id="authSuccessDisplay">
+            <h5 id="authSuccessDisplayIcon" class="fa">&#xf058;</h5>
+            <h5 id="authSuccessDisplayText">Sign-in link sent to your email!</h5>
           </div>
           <button id="authGoogleSignIn">
             <div id="authGoogleSignInIcon"></div>
             <div id="authGoogleSignInText">Sign in with Google</div>
           </button>
-          <button id="authLogIn">LOG IN</button>
-          <button id="authCreateAcount">REGISTER</button>
-          <button id="authLogOut">LOG OUT</button>
-          <h5 id="userDisplay"></h5>
+          <!-- <button id="authLogIn">LOG IN</button>
+          <button id="authCreateAcount">REGISTER</button> -->
+          <button id="authEmailLinkSignIn">SIGN IN WITH EMAIL</button>
+
         </div>
 
         <div id="loadingSpinnerBorder"></div>
         <div id="loadingPercentages">0%</div>
 
-        <div id="startGameFromLoading">START GAME</div>
+        <div id="startGameFromLoadingContainer">
+          <h5 id="userDisplay"></h5>
+          <div id="startGameFromLoading">START GAME</div>
+          <button id="authLogOut">LOG OUT</button>
+        </div>
 
       </div>
     </div>
@@ -102,8 +110,8 @@
         <div id="startLogo" style="background-image: url(img/Sandviper-horizontal-white.svg)"></div>
         <div id="userInGameDisplay">
           <div id="userInGameDisplayEmail"></div>
-          <div id="userInGameDisplayAttemptsLeft"></div>
-          <div id="userInGameDisplayAlert">No more attempts left</div>
+          <!-- <div id="userInGameDisplayAttemptsLeft"></div>
+          <div id="userInGameDisplayAlert">No more attempts left</div> -->
         </div>
         <div id="play" class="ring neon-yellow menu-btn">PLAY</div>
         <div id="choseMale" class="ring neon-yellow menu-btn">
@@ -116,6 +124,7 @@
         </div>
         <div id="controlsDisplay" class="ring neon-yellow menu-btn">CONTROLS</div>
         <div id="creditsDisplay" class="ring neon-yellow menu-btn">CREDITS</div>
+        <div id="exitDisplay" class="ring neon-yellow menu-btn">EXIT</div>
       </div>
       <div id="gameOverContainer">
         <div id="gameOverContainer2" class="ring neon-yellow">
@@ -130,7 +139,7 @@
           <div id="yourCodeDisplayContainer">
             <div id="codeSuccessDisplay">
               <div id="yourCodeDisplay">Your code is</div>
-              <div id="codeDisplay">23VM10</div>
+              <div id="codeDisplay"></div>
               <div id="copyCode">Copy Code</div>
             </div>
             <div id="codeUsedDisplay"></div>
@@ -145,7 +154,7 @@
     </div>
     <div id="upperGameScreen">
       <div id="pauseDisplay">PAUSE</div>
-      <div id="distanceDisplay">0m</div>
+      <div id="scoreDisplay">Score: 0</div>
       <div id="coinsDisplay">
         <div id="coinsLogo" style="background-image: url(img/sandviperLogoWhite.png)"></div>
         <div id="coinsNumber">x 0</div>
@@ -153,6 +162,9 @@
     </div>
     <div id="speedUpContainer">
       <div id="speedUpDisplay">2x</div>
+    </div>
+    <div id="youWonCodeContainer">
+      <div id="youWonCodeDisplay">You won a code!</div>
     </div>
     <div id="muteIcon" style="background-image: url(img/mute.png)"></div>
     <!-- FPS -->
